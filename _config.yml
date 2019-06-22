@@ -1,6 +1,6 @@
 
 # Syntax highlighting
-markdown:            redcarpet
+markdown:            kramdown
 highlighter:         pygments
 
 # Permalinks
@@ -13,7 +13,7 @@ name:				         site name
 title:               site title
 tagline:             'tagline'
 description:         'description'
-url:                 site url
+url:                 http://annatang.ca/
 rss:                 rss feed url
 baseurl:             '/'
 baseurl_posts_img:   '/assets/images/posts/'
