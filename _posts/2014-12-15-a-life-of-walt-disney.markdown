@@ -7,7 +7,7 @@ excerpt: "Walter Elias Disney was an American entrepreneur, cartoonist, animator
 categories: history
 tags:  disney
 image:
-  feature: walt-disney.jpg
+  feature: IMG_2182.jpg
   topPosition: 0px
 bgContrast: dark
 bgGradientOpacity: darker
