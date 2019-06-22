@@ -1,10 +1,11 @@
 
 # Syntax highlighting
-markdown:            kramdown
-highlighter:         rouge
+markdown:            redcarpet
+highlighter:         pygments
 
 # Permalinks
 permalink:           /:title
+relative_permalinks: true
 
 # Setup
 timezone:            your timezone # eg. Asia/Kathmandu
@@ -13,7 +14,7 @@ name:				         site name
 title:               site title
 tagline:             'tagline'
 description:         'description'
-url:                 http://annatang.ca/
+url:                 site url
 rss:                 rss feed url
 baseurl:             '/'
 baseurl_posts_img:   '/assets/images/posts/'
