@@ -24,7 +24,7 @@ icon:                your site icon path # /assets/img/icon.png [best 300px X 30
 disqus:              disqus_shortname # get it on https://disqus.com/admin/
 
 author:
-  name:           	 your name
+  name:           	 Anna Tang
   url:            	 your site url
   facebook:          username
   twitter:           username
