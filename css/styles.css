@@ -574,7 +574,8 @@ body {
 }
 .logo {
   font-size: 40px;
-  font-family: 'Raleway'; 
+  font-family: 'Raleway', sans-serif;
+  /* src: local('Source Sans Pro Regular') */
   font-weight: 500;
   color: #000000;
   text-transform: uppercase;
