@@ -233,7 +233,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: 'Raleway', serif;
+  font-family: 'Raleway';
   color: #ababab;
   font-weight: 400;
   line-height: 1.2em;
@@ -303,7 +303,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: 'Raleyway', serif;
+  font-family: 'Raleyway';
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -521,7 +521,7 @@ body {
   vertical-align: middle;
 }
 .main-menu {
-  font-family: 'Raleway', serif;
+  font-family: 'Raleway';
   letter-spacing: 1px;
   font-size: 18px;
   line-height: 24px;
@@ -575,7 +575,6 @@ body {
 .logo {
   font-size: 40px;
   font-family: 'Raleway'; 
-  src:local("/fonts/Montserrat-Regular.ttf")
   font-weight: 500;
   color: #000000;
   text-transform: uppercase;
@@ -717,7 +716,7 @@ body {
 }
 .pagination-wrap {
   margin-top: 60px;
-  font-family: 'Raleway', serif;
+  font-family: 'Raleway';
 }
 .pagination-wrap ul {
   list-style: none;
