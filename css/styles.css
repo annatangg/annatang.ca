@@ -574,7 +574,8 @@ body {
 }
 .logo {
   font-size: 40px;
-  font-family: 'Raleway', serif;
+  font-family: 'Raleway'; 
+  src:local("/fonts/Montserrat-Regular.ttf")
   font-weight: 500;
   color: #000000;
   text-transform: uppercase;
