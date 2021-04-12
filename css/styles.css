@@ -59,6 +59,8 @@ template {
 a {
   color: #ababab;
   background-color: transparent;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300,
 }
 a:hover,
 a:active {
@@ -233,7 +235,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   color: #ababab;
   font-weight: 400;
   line-height: 1.2em;
@@ -522,6 +524,7 @@ body {
 }
 .main-menu {
   font-family: 'Raleway';
+	font-weight: 400;
   letter-spacing: 1px;
   font-size: 18px;
   line-height: 24px;
@@ -582,6 +585,7 @@ body {
   padding-bottom: 60px;
   letter-spacing: 2px;
   line-height: 40px;
+  justify-content: center;
 }
 .logo a {
   color: inherit;
@@ -1028,7 +1032,7 @@ body {
 .footer-inner .title {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .footer-inner ul {
   list-style: none;
