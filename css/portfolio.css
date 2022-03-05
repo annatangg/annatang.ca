@@ -236,7 +236,7 @@
 	
 	.item-title-hover {
 		font-size:30px;
-		font-family: 'Poppins', sans-serif;
+		font-family: 'raleway', sans-serif;
 		font-weight:700;
 		line-height: 50px;
 		color:#000;
@@ -269,7 +269,7 @@
 	.item-cat {
 		font-size: 12px;
 		font-weight:300;
-		font-family: 'Poppins', sans-serif;
+		font-family: 'raleway', sans-serif;
 		line-height:20px;
 		color:rgba(0,0,0,0.4);
 		display:block;
@@ -525,7 +525,7 @@
 
 	.main-title {
 		font-weight: 700;
-		font-family: "Poppins", sans-serif;
+		font-family: "raleway", sans-serif;
 		font-size: 60px;
 		line-height: 150px;
 		position: absolute;
@@ -539,7 +539,7 @@
 	
 	.main-subtitle {
 		font-weight: 700;
-		font-family: "Poppins", sans-serif;
+		font-family: "raleway", sans-serif;
 		font-size: 30px;
 		line-height: 150px;
 	}
