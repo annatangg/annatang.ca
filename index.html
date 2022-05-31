@@ -1,353 +1,299 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		
-		ga('create', 'code here', 'auto');
-		ga('send', 'pageview');
-	</script>
-    
-    <title>Anna Tang testingtesting</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Anna Tang's portfolio" />
-    <meta name="author" content="Anna Tang">
-    <meta charset="UTF-8" />    
-    <link rel="icon" type="image/ico" href="favicon.png" />
-    <link href="style.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
-   
-</head>
-    
-
-
-
-
-
-
-<body class="hidden">
-
-	
-	<!-- Page Content -->
-	<div id="page-content">
-    	
-        <!-- Preloader -->
-        <div class="preloader-wrap">
-            <div class="outer">
-                <div class="inner">
-                    <div class="percentage" id="precent"></div>                          
-                </div>
-            </div>
-        </div>
-        <!--/Preloader -->
-		
-        <main>
-        <div class="cd-index cd-main-content">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Password Protected Page</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #dialogText {
+            color: white;
+            background-color: #333333;
+        }
         
+        #dialogWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+            background-color: #EEEEEE;
+        }
         
-        <!-- Header -->
-        <header class="scroll-hide">
-            <div id="header-container">
-            
-            
-            <!-- Logo -->
-            <div id="logo" class="hide-ball">
-                <a class="ajax-link" data-type="page-transition" href="index.html">
-                    <img class="black-logo" src="images/logo.png" alt="ANNA TANG">
-                    <img class="white-logo" src="images/logo-white.png" alt="ANNA TANG">
-                </a>
-            </div>
-            <!--/Logo -->             
-            
-            <!-- Menu Burger -->
-            <div id="burger-wrapper" class="parallax-wrap">
-                <div id="menu-burger" class="parallax-element">
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <!--/Menu Burger -->
+        #dialogWrapCell {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
         
-            </div>
-        </header>
-        <!--/Header -->
+        #mainDialog {
+            max-width: 400px;
+            margin: 5px;
+            border: solid #AAAAAA 1px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px 3px #AAAAAA;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            text-align: left;
+        }
+        #mainDialog > * {
+            padding: 10px 30px;
+        }
+        #passArea {
+            padding: 20px 30px;
+            background-color: white;
+        }
+        #passArea > * {
+            margin: 5px auto;
+        }
+        #pass {
+            width: 100%;
+            height: 40px;
+            font-size: 30px;
+        }
         
+        #messageWrapper {
+            float: left;
+            vertical-align: middle;
+            line-height: 30px;
+        }
         
-        <!-- Menu Overlay -->
-        <div id="menu-overlay">
-            
-            <div id="close-menu"></div>  
-            
-            <div class="outer">
-                <div class="inner">
-                    
-                    <nav class="hide-ball">                    
-                        <ul class="main-menu">                            
-                            <li class="menu-timeline has-sub"><a href="#"><span></span>Portfolio</a>
-                                <ul>
-                                    <li><a class="ajax-link-menu" data-type="page-transition" href="index.html">Harley Davidson</a></li>
-                                    <li><a class="ajax-link-menu" data-type="page-transition" href="index2.html">UNICEFF</a></li>
-                                    <li><a class="ajax-link-menu" data-type="page-transition" href="index3.html">QuickBooks</a></li>
-                                    <li><a class="ajax-link-menu" data-type="page-transition" href="index4.html">Petco</a></li>
-                                    <li><a class="ajax-link-menu" data-type="page-transition" href="index4.html">PetSmart</a></li>
-                                    <li><a class="ajax-link-menu" data-type="page-transition" href="index4.html">Toyota</a></li>
-                                    <li><a class="ajax-link-menu" data-type="page-transition" href="index4.html">River and Wilder</a></li>
-                                    <li><a class="ajax-link-menu" data-type="page-transition" href="index4.html">GCM Gradbook</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-timeline"><a class="ajax-link-menu" data-type="page-transition" href="about.html">About</a></li>
-                            <li class="menu-timeline"><a class="ajax-link-menu" data-type="page-transition" href="contact.html">Contact</a></li>
-                        </ul>                
-                    </nav>
-                    
-                </div>
-            </div>
+        .notifyText {
+            display: none;
+        }
         
-        </div>
-        <!-- Menu Overlay -->
+        #invalidPass {
+            color: red;
+        }
         
+        #success {
+            color: green;
+        }
         
-        
-        <!--
-        <div id="sidebar-overlay">
-            
-            <div id="close-sidebar"></div>  
-            
-            <div class="outer">
-                <div class="inner">
-                    
-                    <ul id="filters" class="page-action-content">
-                        <li class="sidebar-timeline"><a id="all" href="#" data-filter="*" class="active link">All</a><span>09</span></li>
-                        <li class="sidebar-timeline"><a href="#" data-filter=".photo" class="link">Photography</a><span>03</span></li>                        
-                        <li class="sidebar-timeline"><a href="#" data-filter=".branding" class="link">Branding</a><span>03</span></li>                        
-                        <li class="sidebar-timeline"><a href="#" data-filter=".design" class="link">Design</a><span>03</span></li>
-                    </ul> 
-                    
-                </div>
-            </div>
-        
-        </div>
-       -->
-        
-        
-        
-        <!-- Page Bottom -->
-        <div id="page-bottom">            
-            
-            <!-- FILTER MENU HIDE
-            <div id="page-action-holder-left" data-tooltip="Categories" data-placement="top">
-                <div class="page-action-wrap parallax-wrap">                                                    
-                    <div class="open-filters parallax-element">
-                        <i class="fa fa-sort"></i>  
-                    </div> 
-                </div>                        	
-            </div>
-            -->
-            
-            <div id="page-action-holder-right" class="no-tooltip" data-tooltip="Go Top" data-placement="top">
-                <div class="page-action-wrap parallax-wrap">
-                    <div class="scrolltotop parallax-element">
-                        <div class="arrow-left"></div>
-                        <div class="arrow-right"></div>
-                        <div class="arrow-top-line"></div>
+        #submitPass {
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: #E7E7E7;
+            border: solid gray 1px;
+            float: right;
+            cursor: pointer;
+        }
+        #contentFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #attribution {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        #attribution, #attribution a {
+            color: #999;
+        }
+        .error {
+            display: none;
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
+    <div id="dialogWrap">
+        <div id="dialogWrapCell">
+            <div id="mainDialog">
+                <div id="dialogText">This page is password protected.</div>
+                <div id="passArea">
+                    <p id="passwordPrompt">Password</p>
+                    <input id="pass" type="password" name="pass" autofocus>
+                    <div>
+                        <span id="messageWrapper">
+                            <span id="invalidPass" class="error">Sorry, please try again.</span>
+                            <span id="trycatcherror" class="error">Sorry, something went wrong.</span>
+                            <span id="success" class="notifyText">Success!</span>
+                            &nbsp;
+                        </span>
+                        <button id="submitPass" type="button">Submit</button>
+                        <div style="clear: both;"></div>
                     </div>
                 </div>
-            </div>
-           	
-        </div>
-        <!--/Page Bottom -->        
-        
-        
-        <!-- Main -->
-        <div id="main">        
-            
-            <!-- Main Content -->
-            <div id="main-content">
-                
-                
-                <!-- Portfolio Wrap -->
-                <div id="portfolio-wrap">                
-                    <!-- Portfolio Columns -->
-                    <div id="portfolio" class="title-reveal">
-                        
-                        <div class="item in-view split-title photo">
-                        	<a class="item-wrap ajax-link-project" data-type="page-transition" href="project01.html">		
-                                <div class="item-content">                            	                                    
-                                    <div class="item-image" data-src="images/project01.jpg" alt="Aruba Portfolio Template by ClaPat"></div>
-                                    <div class="item-caption" data-textcolor="#000">                                
-                                        <h2 class="item-title">UNICEFF</h2>
-                                        <div class="item-title-hover">View Project</div>
-                                        <h4 class="item-cat">Digital</h4>
-                                    </div>
-                                </div>
-                        	</a>    
-                        </div>
-                        
-                        <div class="item in-view wide split-title design">
-                        	<a class="item-wrap ajax-link-project" data-type="page-transition" href="project02.html">
-                                <div class="item-content">                            	                                    
-                                    <div class="item-image" data-src="images/project02.jpg" alt="Aruba Portfolio Template by ClaPat"></div>
-                                    <div class="item-caption" data-textcolor="#000">                                
-                                        <h2 class="item-title">QUICKBOOKS</h2>
-                                        <div class="item-title-hover">View Project</div>
-                                        <h4 class="item-cat">Design</h4>
-                                    </div>
-                                </div>
-                        	</a>
-                        </div>
-                        
-                        <div class="item in-view wide branding">
-                        	<a class="item-wrap ajax-link-project" data-type="page-transition" href="project03.html">	
-                                <div class="item-content">                            	                                    
-                                    <div class="item-image" data-src="images/project03.jpg" alt="Aruba Portfolio Template by ClaPat"></div>
-                                    <div class="item-caption" data-textcolor="#000">                                
-                                        <h2 class="item-title">HARLEY DAVIDSON</h2>
-                                        <div class="item-title-hover">View Project</div>
-                                        <h4 class="item-cat">Branding</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="item in-view design">
-                        	<a class="item-wrap ajax-link-project" data-type="page-transition" href="project04.html">	
-                                <div class="item-content" data-textcolor="#000">                            	                                    
-                                    <div class="item-image" data-src="images/project04.jpg" alt="Aruba Portfolio Template by ClaPat"></div>
-                                    <div class="item-caption">                                
-                                        <h2 class="item-title">PETCO</h2>
-                                        <div class="item-title-hover">View Project</div>
-                                        <h4 class="item-cat">Design</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="item in-view design">
-                        	<a class="item-wrap ajax-link-project" data-type="page-transition" href="project05.html">	
-                                <div class="item-content" data-textcolor="#000">                            	                                    
-                                    <div class="item-image" data-src="images/project05.jpg" alt="Aruba Portfolio Template by ClaPat"></div>
-                                    <div class="item-caption">                                
-                                        <h2 class="item-title">PETSMART</h2>
-                                        <div class="item-title-hover">View Project</div>
-                                        <h4 class="item-cat">Design</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="item in-view wide design">
-                        	<a class="item-wrap ajax-link-project" data-type="page-transition" href="project06.html">	
-                                <div class="item-content" data-textcolor="#000">                            	                                    
-                                    <div class="item-image" data-src="images/project06.jpg" alt="Aruba Portfolio Template by ClaPat"></div>
-                                    <div class="item-caption">                                
-                                        <h2 class="item-title">RIVER & WILDER</h2>
-                                        <div class="item-title-hover">View Project</div>
-                                        <h4 class="item-cat">Design</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="item in-view wide branding">
-                        	<a class="item-wrap ajax-link-project" data-type="page-transition" href="project07.html">	
-                                <div class="item-content" data-textcolor="#000">                            	                                    
-                                    <div class="item-image" data-src="images/project07.jpg" alt="Aruba Portfolio Template by ClaPat"></div>
-                                    <div class="item-caption">                                
-                                        <h2 class="item-title">GCM GRAD BOOK</h2>
-                                        <div class="item-title-hover">View Project</div>
-                                        <h4 class="item-cat">Branding</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="item in-view photo">
-                        	<a class="item-wrap ajax-link-project" data-type="page-transition" href="project08.html">	
-                                <div class="item-content" data-textcolor="#000">                            	                                    
-                                    <div class="item-image" data-src="images/project08.jpg" alt="Aruba Portfolio Template by ClaPat"></div>
-                                    <div class="item-caption">                                
-                                        <h2 class="item-title">BELL</h2>
-                                        <div class="item-title-hover">View Project</div>
-                                        <h4 class="item-cat">Photography</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                               
-                    
-                    </div>
-                    <!--/Portfolio -->                
+                <div id="securecontext" class="error">
+                    <p>
+                        Sorry, but password protection only works over a secure connection. Please load this page via HTTPS.
+                    </p>
                 </div>
-                <!--/Portfolio Wrap -->
-            	
-                
-                <!-- Footer -->
-                <footer class="">        	
-                    <div id="footer-container">
-                    
-                        <div class="footer-info">Want to learn more about me? Connect with me on <a class="link" href="www.linkedin.com/in/tanganna" target="_blank">LinkedIn</a> <br>Or email me at <a class="link" href="hello@annatang.ca">hello@annatang.ca</a></div>                        
-                        
-                    </div>
-                </footer>
-                <!--/Footer -->
-                
-                        
+                <div id="nocrypto" class="error">
+                    <p>
+                        Your web browser appears to be outdated. Please visit this page using a modern browser.
+                    </p>
+                </div>
             </div>
-            <!--/Main Content --> 
-        </div>
-        <!--/Main -->       
-        
-        
-        
-        <div class="page-container">
-          <div class="page" data-src="images/project01.jpg"></div>
-          <div class="page" data-src="images/project02.jpg"></div>
-          <div class="page" data-src="images/project03.jpg"></div>
-          <div class="page" data-src="images/project04.jpg"></div>
-          <div class="page" data-src="images/project05.jpg"></div>
-          <div class="page" data-src="images/project06.jpg"></div>
-          <div class="page" data-src="images/project07.jpg"></div>
-          <div class="page" data-src="images/project08.jpg"></div>
-        </div>
-        
-        
-        
-        
-        </div>
-		</main>
-        
- 	
-    
-    	
-    
- 
-	</div>    
-	<!--/Page Content -->
-    
-    
-    
-    
-    <div class="cd-cover-layer"></div>
-    <div id="magic-cursor">
-        <div id="ball">
-        	<div id="ball-loader"></div>
         </div>
     </div>
-    <div id="clone-image"></div>
-    <div id="rotate-device"></div>
-		
-    <script src="js/jquery.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/scripts.js"></script>
+    <div id="attribution">
+        Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
+    </div>
+    <script>
+    (function() {
 
+        var pl = "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";
+        
+        var submitPass = document.getElementById('submitPass');
+        var passEl = document.getElementById('pass');
+        var invalidPassEl = document.getElementById('invalidPass');
+        var trycatcherror = document.getElementById('trycatcherror');
+        var successEl = document.getElementById('success');
+        var contentFrame = document.getElementById('contentFrame');
+        
+        // Sanity checks
 
+        if (pl === "") {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
+            return;
+        }
 
-</body>
+        if (!isSecureContext) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#securecontext").style.display = "block";
+            return;
+        }
 
+        if (!crypto.subtle) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#nocrypto").style.display = "block";
+            return;
+        }
+        
+        function str2ab(str) {
+            var ustr = atob(str);
+            var buf = new ArrayBuffer(ustr.length);
+            var bufView = new Uint8Array(buf);
+            for (var i=0, strLen=ustr.length; i < strLen; i++) {
+                bufView[i] = ustr.charCodeAt(i);
+            }
+            return bufView;
+        }
+
+        async function deriveKey(salt, password) {
+            const encoder = new TextEncoder()
+            const baseKey = await crypto.subtle.importKey(
+                'raw',
+                encoder.encode(password),
+                'PBKDF2',
+                false,
+                ['deriveKey'],
+            )
+            return await crypto.subtle.deriveKey(
+                { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
+                baseKey,
+                { name: 'AES-GCM', length: 256 },
+                true,
+                ['decrypt'],
+            )
+        }
+        
+        async function doSubmit(evt) {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+
+            let iv, ciphertext, key;
+            
+            try {
+                var unencodedPl = str2ab(pl);
+
+                const salt = unencodedPl.slice(0, 32)
+                iv = unencodedPl.slice(32, 32 + 16)
+                ciphertext = unencodedPl.slice(32 + 16)
+
+                key = await deriveKey(salt, passEl.value);
+            } catch (e) {
+                trycatcherror.style.display = "inline";
+                console.error(e);
+                return;
+            }
+
+            try {
+                const decryptedArray = new Uint8Array(
+                    await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext)
+                );
+
+                let decrypted = new TextDecoder().decode(decryptedArray);
+
+                if (decrypted === "") throw "No data returned";
+
+                const basestr = '<base href="." target="_top">';
+                const anchorfixstr = `
+                    <script>
+                        Array.from(document.links).forEach((anchor) => {
+                            const href = anchor.getAttribute("href");
+                            if (href.startsWith("#")) {
+                                anchor.addEventListener("click", function(e) {
+                                    e.preventDefault();
+                                    const targetId = this.getAttribute("href").substring(1);
+                                    const targetEl = document.getElementById(targetId);
+                                    targetEl.scrollIntoView();
+                                });
+                            }
+                        });
+                    <\/script>
+                `;
+                
+                // Set default iframe link targets to _top so all links break out of the iframe
+                if (decrypted.includes("<head>")) decrypted = decrypted.replace("<head>", "<head>" + basestr);
+                else if (decrypted.includes("<!DOCTYPE html>")) decrypted = decrypted.replace("<!DOCTYPE html>", "<!DOCTYPE html>" + basestr);
+                else decrypted = basestr + decrypted;
+
+                // Fix fragment links
+                if (decrypted.includes("</body>")) decrypted = decrypted.replace("</body>", anchorfixstr + '</body>');
+                else if (decrypted.includes("</html>")) decrypted = decrypted.replace("</html>", anchorfixstr + '</html>');
+                else decrypted = decrypted + anchorfixstr;
+                
+                contentFrame.srcdoc = decrypted;
+                
+                successEl.style.display = "inline";
+                setTimeout(function() {
+                    dialogWrap.style.display = "none";
+                }, 1000);
+            } catch (e) {
+                invalidPassEl.style.display = "inline";
+                passEl.value = "";
+                submitPass.disabled = false;
+                passEl.disabled = false;
+                console.error(e);
+                return;
+            }
+        }
+        
+        submitPass.onclick = doSubmit;
+        passEl.onkeypress = function(e){
+            if (!e) e = window.event;
+            var keyCode = e.keyCode || e.which;
+            invalidPassEl.style.display = "none";
+            if (keyCode == '13'){
+              // Enter pressed
+              doSubmit();
+              return false;
+            }
+        }
+    })();
+    </script>
+  </body>
 </html>
